@@ -1,3 +1,9 @@
+$ntpservice = $osfamily ? {
+  'redhat' => 'ntpd'
+  'debian' => 'ntp'
+  default  => 'ntp'
+}
+
 node 'wiki' {
   file { '/info.txt':
     ensure  => 'present',
@@ -8,7 +14,7 @@ node 'wiki' {
     ensure => 'installed'
   }
 
-  service { 'ntpd':
+  service { $ntpservice:
     ensure  => 'running',
     enable  => true
   }
@@ -19,7 +25,7 @@ node 'wikitest' {
     ensure => 'installed'
   }
 
-  service { 'ntpd':
+  service { $ntpservice:
     ensure  => 'running',
     enable  => true
   }
