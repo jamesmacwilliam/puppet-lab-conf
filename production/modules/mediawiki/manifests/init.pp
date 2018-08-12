@@ -33,4 +33,7 @@ class mediawiki {
   file { '/var/www/html/index.html':
     ensure => 'absent'
   }
+
+  # resource ordering (remove index file before we clone from git
+  File['/var/www/html/index.html'] -> Vcsrepo['/var/www/html']
 }
