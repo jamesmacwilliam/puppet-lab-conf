@@ -8,4 +8,10 @@ class mediawiki {
   package { $phpmysql:
     ensure => 'present'
   }
+
+  if $osfamily == 'redhat' {
+    package { 'php-xml':
+      ensure => 'present'
+    }
+  }
 }
