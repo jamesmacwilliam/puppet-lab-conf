@@ -21,9 +21,9 @@ class linux {
 }
 
 node 'wiki' {
-  { class 'linux': }
+  class { 'linux': }
 }
 
 node 'wikitest' {
-  { class 'linux': }
+  class { 'linux': }
 }
