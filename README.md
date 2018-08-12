@@ -8,3 +8,10 @@
 * may need to add `eval $(/usr/libexec/path_helper -s)` if using zshell
 
 - then run `pdk new module <module-name>`
+
+
+ #### Add existing modules
+https://forge.puppet.com
+
+- `puppet module install <module> --version <version> --modulepath production/modules` #modulepath/version are optional
+* must have puppet installed
