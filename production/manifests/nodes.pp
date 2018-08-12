@@ -7,10 +7,20 @@ node 'wiki' {
   package { 'ntp':
     ensure => 'installed'
   }
+
+  service { 'ntpd':
+    ensure  => 'running',
+    enabled => true
+  }
 }
 
 node 'wikitest' {
   package { 'ntp':
     ensure => 'installed'
+  }
+
+  service { 'ntpd':
+    ensure  => 'running',
+    enabled => true
   }
 }
