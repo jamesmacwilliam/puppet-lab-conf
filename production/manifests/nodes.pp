@@ -10,7 +10,7 @@ node 'wiki' {
 
   service { 'ntpd':
     ensure  => 'running',
-    enabled => true
+    enable  => true
   }
 }
 
@@ -21,6 +21,6 @@ node 'wikitest' {
 
   service { 'ntpd':
     ensure  => 'running',
-    enabled => true
+    enable  => true
   }
 }
