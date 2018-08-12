@@ -4,7 +4,7 @@ $ntpservice = $osfamily ? {
   default  => 'ntp'
 }
 
-node 'wiki' {
+class linux {
   file { '/info.txt':
     ensure  => 'present',
     content => inline_template("Created by Puppet at <%= Time.now %>\n")
@@ -20,13 +20,10 @@ node 'wiki' {
   }
 }
 
-node 'wikitest' {
-  package { 'ntp':
-    ensure => 'installed'
-  }
+node 'wiki' {
+  { class 'linux': }
+}
 
-  service { $ntpservice:
-    ensure  => 'running',
-    enable  => true
-  }
+node 'wikitest' {
+  { class 'linux': }
 }
