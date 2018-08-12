@@ -14,4 +14,12 @@ class mediawiki {
       ensure => 'present'
     }
   }
+
+  class { '::apache':
+    docroot    => '/var/www/html',
+    mpm_module => 'prefork',
+    subscribe  => Package[$phpmysql], # sets $phpmysql as a dependency
+  }
+
+  class { '::apache::mod::php': }
 }
