@@ -5,7 +5,7 @@ class linux {
     default  => 'ntp'
   }
 
-  $admintools = ['git', 'vim', 'screen']
+  $admintools = ['git', 'nano', 'screen']
 
   package { $admintools:
     ensure => 'installed'
