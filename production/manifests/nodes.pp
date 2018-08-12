@@ -1,9 +1,3 @@
-$ntpservice = $osfamily ? {
-  'redhat' => 'ntpd'
-  'debian' => 'ntp'
-  default  => 'ntp'
-}
-
 class linux {
   file { '/info.txt':
     ensure  => 'present',
@@ -12,6 +6,12 @@ class linux {
 
   package { 'ntp':
     ensure => 'installed'
+  }
+
+  $ntpservice = $osfamily ? {
+    'redhat' => 'ntpd',
+    'debian' => 'ntp',
+    default  => 'ntp'
   }
 
   service { $ntpservice:
