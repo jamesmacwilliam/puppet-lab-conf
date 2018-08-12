@@ -28,8 +28,10 @@ class linux {
 
 node 'wiki' {
   class { 'linux': }
+  class { 'mediawiki': }
 }
 
 node 'wikitest' {
   class { 'linux': }
+  class { 'mediawiki': }
 }
