@@ -22,6 +22,6 @@ class linux {
 
   file { '/info.txt':
     ensure  => 'present',
-    content => inline_template("Created by Puppet at <%= Time.now %>\n")
+    content => inline_template("Hello World\nCreated by Puppet at <%= Time.now %>\n")
   }
 }
