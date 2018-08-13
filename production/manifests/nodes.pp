@@ -1,7 +1,7 @@
 node 'wiki' {
-  hiera_include('classes')
+  include roles::node
 }
 
 node 'wikitest' {
-  hiera_include('classes')
+  include roles::node
 }
