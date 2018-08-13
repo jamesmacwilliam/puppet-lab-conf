@@ -36,4 +36,8 @@ class mediawiki {
 
   # resource ordering (remove index file before we clone from git
   File['/var/www/html/index.html'] -> Vcsrepo['/var/www/html']
+
+  class { '::mysql::server':
+    root_password => 'training' # obviously bad practice but this we're following a lab
+  }
 }
