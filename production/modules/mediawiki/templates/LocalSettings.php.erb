@@ -6,8 +6,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "<%= wikisitename %>";
-$wgMetaNamespace = "<%= wikimetanamespace %>";
+$wgSitename = "<%= $wikisitename %>";
+$wgMetaNamespace = "<%= $wikimetanamespace %>";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -18,7 +18,7 @@ $wgScriptPath = "";
 $wgScriptExtension = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "<%= wikiserver %>";
+$wgServer = "<%= $wikiserver %>";
 
 ## The relative URL path to the skins directory
 $wgStylePath = "$wgScriptPath/skins";
@@ -41,10 +41,10 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "<%= wikidbserver %>";
-$wgDBname = "<%= wikidbname %>";
-$wgDBuser = "<%= wikidbuser %>";
-$wgDBpassword = "<%= wikidbpassword %>";
+$wgDBserver = "<%= $wikidbserver %>";
+$wgDBname = "<%= $wikidbname %>";
+$wgDBuser = "<%= $wikidbuser %>";
+$wgDBpassword = "<%= $wikidbpassword %>";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -91,7 +91,7 @@ $wgSecretKey = "1f8111b693139dab34837dc024766b1cb516179e01eeaa2c0c0e715fd795cad5
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "<%= wikiupgradekey %>";
+$wgUpgradeKey = "<%= $wikiupgradekey %>";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'cologneblue', 'monobook', 'vector':
