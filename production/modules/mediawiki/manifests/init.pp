@@ -1,4 +1,13 @@
 class mediawiki {
+  $wikidbserver = hiera('mediawiki::wikidbserver')
+  $wikidbname = hiera('mediawiki::wikidbname')
+  $wikidbuser = hiera('mediawiki::wikidbuser')
+  $wikidbpassword = hiera('mediawiki::wikidbpassword')
+  $wikiupgradekey = hiera('mediawiki::wikiupgradekey')
+  $wikisitename = hiera('mediawiki::wikisitename')
+  $wikimetanamespace = hiera('mediawiki::wikimetanamespace')
+  $wikiserver = hiera('mediawiki::wikiserver')
+
   $phpmysql = $osfamily ? {
     'redhat' => 'php-mysql',
     'debian' => 'php5-mysql',

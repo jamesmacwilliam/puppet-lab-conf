@@ -1,0 +1,3 @@
+mediawiki::wikisitename: wikitest
+mediawiki::wikimetanamespace: WikiTest
+mediawiki::wikiserver: http://172.31.0.203
