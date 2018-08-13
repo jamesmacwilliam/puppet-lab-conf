@@ -1,3 +1,7 @@
+classes:
+  - linux
+  - mediawiki
+
 mediawiki::wikidbserver: localhost
 mediawiki::wikidbname: wiki
 mediawiki::wikidbuser: root
