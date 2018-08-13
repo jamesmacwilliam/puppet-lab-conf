@@ -44,8 +44,8 @@ class mediawiki {
   class { '::firewall': }
 
   firewall { '000 allow http access':
-    port   => 80,
-    proto  => 'tcp',
-    action => 'accept'
+    dport   => 80,
+    proto   => 'tcp',
+    action  => 'accept'
   }
 }
