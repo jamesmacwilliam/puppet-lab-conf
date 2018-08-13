@@ -2,6 +2,6 @@ node 'wiki' {
   include roles::node
 }
 
-node 'wikitest' {
+node default {
   include roles::node
 }
