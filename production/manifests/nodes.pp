@@ -1,11 +1,7 @@
 node 'wiki' {
-  #hiera_include('classes')
-  class { 'linux': }
-  class { 'mediawiki': }
+  hiera_include('classes')
 }
 
 node 'wikitest' {
-  #hiera_include('classes')
-  class { 'linux': }
-  class { 'mediawiki': }
+  hiera_include('classes')
 }
