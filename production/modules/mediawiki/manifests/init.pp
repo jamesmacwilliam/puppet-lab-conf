@@ -40,4 +40,12 @@ class mediawiki {
   class { '::mysql::server':
     root_password => 'training' # obviously bad practice but this we're following a lab
   }
+
+  class { '::firewall': }
+
+  firewall { '000 allow http access':
+    port   => 80,
+    proto  => 'tcp',
+    action => 'accept'
+  }
 }
