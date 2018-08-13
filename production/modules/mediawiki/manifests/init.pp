@@ -48,4 +48,10 @@ class mediawiki {
     proto   => 'tcp',
     action  => 'accept'
   }
+
+  file { 'LocalSettings.php':
+    path    => '/var/www/html/LocalSettings.php',
+    ensure  => 'file',
+    content => template('mediawiki/LocalSettings.php.erb')
+  }
 }
