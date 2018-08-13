@@ -1,3 +1,4 @@
+---
 mediawiki::wikisitename: wiki
 mediawiki::wikimetanamespace: Wiki
 mediawiki::wikiserver: http://172.31.0.202
