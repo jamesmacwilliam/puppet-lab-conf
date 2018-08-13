@@ -1,4 +1,10 @@
 ---
-:hierarchy:
-  - "%{clientcert}"
-  - common
+version: 5
+hierarchy:
+  - name: 'Node values'
+    path: "%{clientcert}.yaml"
+  - name: 'Common values'
+    path: 'common.yaml'
+defaults:
+  data_hash: yaml_data
+  datadir: data
