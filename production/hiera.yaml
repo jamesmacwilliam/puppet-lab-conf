@@ -1,5 +1,4 @@
-mediawiki::wikidbserver: localhost
-mediawiki::wikidbname: wiki
-mediawiki::wikidbuser: root
-mediawiki::wikidbpassword: training
-mediawiki::wikiupgradekey: puppet
+---
+:hierarchy:
+  - "%{clientcert}"
+  - common

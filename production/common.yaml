@@ -1,4 +1,3 @@
----
 mediawiki::wikidbserver: localhost
 mediawiki::wikidbname: wiki
 mediawiki::wikidbuser: root
