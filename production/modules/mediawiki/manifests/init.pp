@@ -12,7 +12,7 @@ class mediawiki {
     cwd     => '/var/www/html',
     user    => 'root',
     path    => '/bin',
-    command => "php maintenance/install.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
+    command => "php maintenance/install.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} --pass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
   }
 
   $phpmysql = $osfamily ? {
