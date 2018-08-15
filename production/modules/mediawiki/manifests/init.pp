@@ -13,7 +13,7 @@ class mediawiki {
     user    => 'root',
     path    => '/bin',
     onlyif  => 'test ! -f LocalSettings.php',
-    command => "php maintenance.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
+    command => "php maintenance/install.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
   }
 
   $phpmysql = $osfamily ? {
