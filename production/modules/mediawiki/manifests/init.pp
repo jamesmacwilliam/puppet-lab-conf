@@ -1,12 +1,12 @@
 class mediawiki {
-  $wikidbserver = hiera('mediawiki::wikidbserver')
-  $wikidbname = hiera('mediawiki::wikidbname')
-  $wikidbuser = hiera('mediawiki::wikidbuser')
-  $wikidbpassword = hiera('mediawiki::wikidbpassword')
-  $wikiupgradekey = hiera('mediawiki::wikiupgradekey')
-  $wikisitename = hiera('mediawiki::wikisitename')
-  $wikimetanamespace = hiera('mediawiki::wikimetanamespace')
-  $wikiserver = hiera('mediawiki::wikiserver')
+  $wikidbserver = lookup('mediawiki::wikidbserver')
+  $wikidbname = lookup('mediawiki::wikidbname')
+  $wikidbuser = lookup('mediawiki::wikidbuser')
+  $wikidbpassword = lookup('mediawiki::wikidbpassword')
+  $wikiupgradekey = lookup('mediawiki::wikiupgradekey')
+  $wikisitename = lookup('mediawiki::wikisitename')
+  $wikimetanamespace = lookup('mediawiki::wikimetanamespace')
+  $wikiserver = lookup('mediawiki::wikiserver')
 
   $phpmysql = $osfamily ? {
     'redhat' => 'php-mysql',
