@@ -12,7 +12,6 @@ class mediawiki {
     cwd     => '/var/www/html',
     user    => 'root',
     path    => '/bin',
-    onlyif  => 'test ! -f LocalSettings.php',
     command => "php maintenance/install.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
   }
 
