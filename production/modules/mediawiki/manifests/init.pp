@@ -8,7 +8,7 @@ class mediawiki {
   $wikimetanamespace = lookup('mediawiki::wikimetanamespace')
   $wikiserver = lookup('mediawiki::wikiserver')
 
-  execute { 'setup mediawiki':
+  exec { 'setup mediawiki':
     cwd     => '/var/www/html',
     user    => 'root',
     path    => '/bin',
