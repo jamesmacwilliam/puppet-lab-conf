@@ -8,6 +8,14 @@ class mediawiki {
   $wikimetanamespace = lookup('mediawiki::wikimetanamespace')
   $wikiserver = lookup('mediawiki::wikiserver')
 
+  execute { 'setup mediawiki':
+    cwd     => '/var/www/html',
+    user    => 'root',
+    path    => '/bin',
+    onlyif  => 'test ! -f LocalSettings.php',
+    command => "php maintenance.php --dbserver ${wikidbserver} --dbname ${wikidbname} --dbuser ${wikidbuser} --dbpass ${wikidbpassword} ${wikisitename} ${wikidbpassword}"
+  }
+
   $phpmysql = $osfamily ? {
     'redhat' => 'php-mysql',
     'debian' => 'php5-mysql',
